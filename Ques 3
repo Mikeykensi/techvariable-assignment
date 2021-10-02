@@ -1,0 +1,22 @@
+#function to reverse the string
+def revStr(str):
+    index = -1
+    
+    for i in range(len(str)-1, int(len(str)/2), -1):
+ 
+        #reverse the alphabet except alphanumeric character
+        if str[i].isalpha():
+            var = str[i]
+            while True:
+                index += 1
+                if str[index].isalpha():
+                    str[i] = str[index]
+                    str[index] = var
+                    break
+    return str
+     
+#main code
+str=input("Enter the string:")
+print ("Original string: ", str)
+string = revStr(list(str))
+print ("Reversed string: ", "".join(string))
