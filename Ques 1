@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int main()
+{
+
+    int s[10];
+    int i,j,k,n,count=0;
+    printf("Enter the length of the array:");
+    scanf("%d",&n);
+
+     printf("\nEnter the divisor for the sum of elements:");
+     scanf("%d",&k);
+     printf("\nEnter the element of the array:");
+     for(i=0;i<n;i++)
+     {
+        scanf("%d",&s[i]);
+     }
+
+     for(i=0;i<n;i++)
+     {
+        for(j=i+1;j<n;j++)
+        {
+
+        if(((s[i]+s[i+1])%k)!=0)
+            count++;
+        }
+     }
+     printf("subset=%d",count);
+     return 0;
+}
